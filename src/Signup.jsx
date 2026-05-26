@@ -1,8 +1,33 @@
 import logo from './assets/reekol-logo-bg.png'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Signup = () => {
+    //info states
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     const size = 24;
+    //handlesignup function
+    async function handleSignup(e) {
+        e.preventDefault();
+        const response = await fetch("https://reekol-backend.onrender.com/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                password
+            })
+        })
+
+        const data = response.json();
+        console.log(data)
+    }
+
+
     return (
         <div className="font-bricolage">
             <div className="w-full h-screen grid grid-cols-2">
@@ -23,18 +48,18 @@ const Signup = () => {
                         <p className='text-gray-500 text-center'>Create an account</p>
                         <div className='w-100 m-auto my-3'>
                             <div className='my-2'>
+                                <p className='my-1.5'>Your Name</p>
+                                <input onChange={(e) => { setName(e.target.value) }} type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
+                            </div>
+                            <div>
                                 <p className='my-1.5'>Your Email</p>
-                                <input type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
+                                <input onChange={(e) => { setEmail(e.target.value) }} type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
                             </div>
                             <div>
                                 <p className='my-1.5'>Password</p>
-                                <input type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
+                                <input onChange={(e) => { setPassword(e.target.value) }} type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
                             </div>
-                            <div>
-                                <p className='my-1.5'>Confirm Password</p>
-                                <input type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
-                            </div>
-                            <div className='w-full bg-green h-9 text-white flex items-center justify-center rounded-lg my-6'>
+                            <div onClick={(e) => handleSignup(e)} className='w-full bg-green h-9 text-white flex items-center justify-center rounded-lg my-6'>
                                 <p>Signup</p>
                             </div>
                             <div className='flex items-center my-6 justify-self-center'>
