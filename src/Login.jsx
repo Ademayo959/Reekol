@@ -12,7 +12,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const res = await fetch("https://your-backend-url.onrender.com/user/login", {
+            const res = await fetch("https://reekol-backend.onrender.com/user/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
