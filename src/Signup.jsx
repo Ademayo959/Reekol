@@ -11,7 +11,7 @@ const Signup = () => {
     //handlesignup function
     async function handleSignup(e) {
         e.preventDefault();
-        const response = await fetch("https://reekol-backend.onrender.com/register", {
+        const response = await fetch("https://reekol-backend.onrender.com/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
