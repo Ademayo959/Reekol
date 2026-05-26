@@ -2,7 +2,43 @@ import logo from './assets/reekol-logo-bg.png'
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+    //login states
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     const size = 24;
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        try {
+            const res = await fetch("https://your-backend-url.onrender.com/user/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                console.log(data.message);
+                return;
+            }
+
+            // store token
+            localStorage.setItem("token", data.JWTtoken);
+            localStorage.setItem("name", data.name);
+
+            console.log("Logged in successfully");
+        } catch (err) {
+            console.log("Login error:", err);
+        }
+    };
+
     return (
         <div className="font-bricolage">
             <div className="w-full h-screen grid grid-cols-2">
@@ -24,11 +60,11 @@ const Login = () => {
                         <div className='w-100 m-auto my-3'>
                             <div className='my-2'>
                                 <p className='my-1.5'>Your Email</p>
-                                <input type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
+                                <input onChange={(e) => { setEmail(e.target.value) }} type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
                             </div>
                             <div>
                                 <p className='my-1.5'>Password</p>
-                                <input type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
+                                <input type="text" onChange={(e) => { setPassword(e.target.value) }} className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
                             </div>
                             <div className='flex justify-between w-full my-4'>
                                 <div className='flex gap-1'>
@@ -39,7 +75,7 @@ const Login = () => {
                                     <p className='text-gray-500'>Forgot Password</p>
                                 </div>
                             </div>
-                            <div className='w-full bg-green h-9 text-white flex items-center justify-center rounded-lg'>
+                            <div onClick={(e) => handleLogin(e)} className='w-full bg-green h-9 text-white flex items-center justify-center rounded-lg'>
                                 <p>Login</p>
                             </div>
                             <div className='flex items-center my-6 justify-self-center'>
