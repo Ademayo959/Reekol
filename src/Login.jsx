@@ -1,8 +1,11 @@
 import logo from './assets/reekol-logo-bg.png'
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
+
     //login states
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -33,7 +36,7 @@ const Login = () => {
             // store token
             localStorage.setItem("token", data.JWTtoken);
             localStorage.setItem("name", data.name);
-
+            navigate("/dashboard");
             console.log("Logged in successfully");
         } catch (err) {
             console.log("Login error:", err);
