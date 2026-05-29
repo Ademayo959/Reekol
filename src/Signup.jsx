@@ -30,8 +30,8 @@ const Signup = () => {
 
     return (
         <div className="font-bricolage">
-            <div className="w-full h-screen grid grid-cols-2">
-                <div className="bg-[url('./assets/reekol-pattern.png')] px-8 py-14 grid justify-between">
+            <div className="w-full h-screen grid grid-cols-2 max-sm:grid-cols-1">
+                <div className="bg-[url('./assets/reekol-pattern.png')] px-8 py-14 grid justify-between max-sm:hidden">
                     <Link to="/" className='cursor-pointer`'>
                         <img src={logo} alt="logo" className='w-30' />
                     </Link>
@@ -42,11 +42,11 @@ const Signup = () => {
                         </div>
                     </div>
                 </div>
-                <div className='my-auto'>
-                    <div>
-                        <p className='text-center text-[36px]'>Start using Reekol today!</p>
+                <div className='my-auto max-sm:w-full'>
+                    <div className='max-sm:px-4'>
+                        <p className='text-center text-[36px] max-sm:w-full max-sm:leading-12'>Start using Reekol today!</p>
                         <p className='text-gray-500 text-center'>Create an account</p>
-                        <div className='w-100 m-auto my-3'>
+                        <div className='w-100 m-auto my-3 max-sm:w-full'>
                             <div className='my-2'>
                                 <p className='my-1.5'>Your Name</p>
                                 <input onChange={(e) => { setName(e.target.value) }} type="text" className='h-8 w-full border border-gray-300 rounded-lg px-4 py-5 text-bricolage outline-0' />
@@ -63,12 +63,12 @@ const Signup = () => {
                                 <p>Signup</p>
                             </div>
                             <div className='flex items-center my-6 justify-self-center'>
-                                <hr className='w-32 text-gray-400' />
+                                <hr className='w-32 text-gray-400 max-sm:w-24' />
                                 <p className='mx-3 text-[13px] text-gray-500'>OR SIGNUP WITH</p>
-                                <hr className='w-32 text-gray-400' />
+                                <hr className='w-32 text-gray-400 max-sm:w-24' />
                             </div>
                             <div className='flex justify-between'>
-                                <div className='flex gap-2 border border-gray-200 p-2 w-fit rounded-lg px-11'>
+                                <div className='flex gap-2 border border-gray-200 p-2 w-fit rounded-lg px-11 max-sm:px-7.5'>
                                     <svg width={size} height={size} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 2.9l5.7-5.7C34.5 6.5 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-9 20-20 0-1.2-.1-2.4-.4-3.5z" fill="#FFC107" />
                                         <path d="M6.3 14.7l6.6 4.8C14.6 15.5 18.9 12 24 12c3.1 0 5.8 1.1 7.9 2.9l5.7-5.7C34.5 6.5 29.6 4 24 4 16.3 4 9.6 8.4 6.3 14.7z" fill="#FF3D00" />
@@ -77,7 +77,7 @@ const Signup = () => {
                                     </svg>
                                     <p className='text-green'>Google</p>
                                 </div>
-                                <div className='flex gap-2 border border-gray-200 p-2 w-fit rounded-lg px-11'>
+                                <div className='flex gap-2 border border-gray-200 p-2 w-fit rounded-lg px-11 max-sm:px-7.5'>
                                     <svg className='text-blue-500' xmlns="http://www.w3.org/2000/svg" width={24} height={24}
                                         fill={"currentColor"} viewBox={"0 0 24 24"}>
                                         {/* Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free */}
