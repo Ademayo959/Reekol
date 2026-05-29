@@ -6,14 +6,14 @@ import sticky from './assets/images-floating/sticky.png'
 const Hero = () => {
     return (
         <div className='overflow-x-hidden relative'>
-            <img src={marker} alt="marker" className='absolute -left-36 w-100 top-50' />
+            <img src={marker} alt="marker" className='absolute -left-36 w-100 top-50 max-sm:hidden' />
             <img
                 src={sticky}
                 alt="marker"
-                className='absolute -right-40 top-30 w-100'
+                className='absolute -right-40 top-30 w-100 max-sm:hidden'
             />
             <div className="font-bricolage mt-18 justify-self-center max-w-7xl">
-                <div className="flex my-2 items-center gap-2 text-[13px] px-2 py-1 justify-self-center border border-gray-200 shadow-md rounded-2xl w-fit h-fit">
+                <div className="flex my-2 items-center gap-2 text-[13px] px-2 py-1 justify-self-center border border-gray-200 shadow-md rounded-2xl w-fit h-fit max-sm:text-[12px]">
                     <p className="text-gray-600">Introducing Reekol Partners</p>
                     <div className="flex text-green items-center gap-1 cursor-pointer">
                         <p>Read More</p>
@@ -23,8 +23,8 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="justify-self-center text-center w-full">
-                    <p className="text-[85px] font-bricolage-bold tracking-tight text-green my-3 leading-20">Never miss a <br /> tutorial again</p>
-                    <p className="text-gray-500 text-center">Reekol is the modern platform for last minute study groups, <br /> tracking exam prep, and finding the best tutors on campus</p>
+                    <p className="text-[85px] font-bricolage-bold tracking-tight text-green my-3 w-150 justify-self-center leading-20 max-sm:w-80 max-sm:text-[65px] max-sm:leading-15">Never miss a tutorial again</p>
+                    <p className="text-gray-500 text-center justify-self-center w-125 max-sm:w-80">Reekol is the modern platform for last minute study groups, tracking exam prep, and finding the best tutors on campus</p>
                     <div className="flex gap-4 justify-self-center my-8">
                         <Link to='/dashboard'>
                             <div className='bg-green w-fit px-4 text-center h-9 flex items-center justify-center rounded-3xl shadow-md transition-all hover:-mt-1 cursor-pointer'>
@@ -41,19 +41,19 @@ const Hero = () => {
                     <div className="flex h-10 gap-2 border border-gray-300 px-1 w-fit items-center rounded-3xl justify-self-center shadow-lg">
                         <div className="flex gap-2 items-center w-fit px-2 rounded-3xl h-8 justify-center bg-gray-100">
                             <div className="bg-red-500 w-2 h-2"></div>
-                            <p className="text-green">Live Sessions</p>
+                            <p className="text-green text-[0.7rem]">Live Sessions</p>
                         </div>
                         <div className="flex gap-2 items-center w-fit px-2 rounded-3xl h-8 justify-center">
                             <div className="bg-yellow-500 w-2 h-2 rounded-full"></div>
-                            <p className="text-gray-500">Top Tutors</p>
+                            <p className="text-gray-500 text-[0.7rem]">Top Tutors</p>
                         </div>
                         <div className="flex gap-2 items-center w-fit px-2 rounded-3xl h-8 justify-center">
                             <div className="bg-purple-500 w-2 h-2"></div>
-                            <p className="text-gray-500">Exam Prep</p>
+                            <p className="text-gray-500 text-[0.7rem]">Exam Prep</p>
                         </div>
                     </div>
-                    <div className='my-12 rounded-3xl shadow-lg'>
-                        <img src={screenshot} alt="" className='w-5xl' />
+                    <div className='my-12 rounded-3xl shadow-lg max-sm:px-2'>
+                        <img src={screenshot} alt="" className='w-5xl max-sm:w-full max-sm:rounded-3xl max-sm:mx-2' />
                     </div>
                 </div>
             </div>

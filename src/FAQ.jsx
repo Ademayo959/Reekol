@@ -24,10 +24,10 @@ const FAQ = () => {
     return (
         <div className="font-bricolage my-18">
             <div>
-                <p className="text-5xl text-green text-center">Frequently asked Questions</p>
-                <div className="justify-self-center mt-12 grid gap-y-4">
+                <p className="text-5xl text-green text-center max-sm:leading-15 max-sm:text-[2.7rem] ">Frequently asked Questions</p>
+                <div className="justify-self-center mt-12 grid gap-y-4 max-sm:px-2">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="border border-gray-300 w-150 rounded-3xl p-2">
+                        <div key={index} className="border border-gray-300 w-150 rounded-3xl p-2 max-sm:w-full max-sm:rounded-2xl max-sm:p-1">
                             <div className="flex items-center justify-between p-2" onClick={() => setOpenIndex(openIndex == index ? null : index)}>
                                 <p className="text-green">{faq.question}</p>
                                 <span className="ml-4">{openIndex === index ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5 text-gray-500">

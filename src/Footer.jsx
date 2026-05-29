@@ -3,11 +3,11 @@ import logo from './assets/reekol-logo-bg.png'
 const Footer = () => {
     return (
         <div className="font-bricolage border-t border-gray-300">
-            <div className="max-w-6xl mx-auto text-gray-500">
-                <div className='grid grid-cols-[40%_20%_20%_20%] gap-10 max-w-full my-12'>
+            <div className="max-w-6xl mx-auto text-gray-500 max-sm:px-6">
+                <div className='grid grid-cols-[40%_20%_20%_20%] gap-10 max-w-full my-12 max-sm:grid-cols-1'>
                     <div>
                         <img src={logo} alt="rekol logo" className='w-35 my-2.5' />
-                        <p className='w-90'>The modern platform for university students to find and host tutorials.</p>
+                        <p className='w-90 max-sm:w-full'>The modern platform for university students to find and host tutorials.</p>
                     </div>
                     <div className='grid gap-2'>
                         <p className='text-green'>Product</p>
@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
                 <hr className="text-gray-300" />
                 <div className="flex justify-between items-center py-6">
-                    <p>© 2026 Rekol Inc, All Rights Reserved</p>
+                    <p className='max-sm:text-[0.8rem]'>© 2026 Rekol Inc, All Rights Reserved</p>
                     <div className="flex gap-4 text-green">
                         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24}
                             fill={"currentColor"} viewBox={"0 0 24 24"}>
