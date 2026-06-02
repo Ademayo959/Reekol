@@ -46,8 +46,8 @@ const MyScheduleDashboard = () => {
         <div className="w-full px-6 pt-6 bg-gray-100 h-full">
             <div>
                 <div className="flex justify-between items-center">
-                    <p className="text-[40px]">My Schedule</p>
-                    <p className="text-gray-600">Thursday, <span className="text-green">11th of January 2026</span></p>
+                    <p className="text-[40px] font-bricolage-bold">My Schedule</p>
+                    <p className="text-gray-600">Thursday, <span className="text-green font-bricolage-bold">11th of January 2026</span></p>
                 </div>
                 <div className="flex justify-between my-4 items-center">
                     <select name="" id="" className="bg-gray-0 p-2 rounded-lg">
@@ -57,7 +57,7 @@ const MyScheduleDashboard = () => {
                     </select>
                     <div className="text-end leading-6">
                         <p className="text-gray-500 text-[14px] m-0">Now Showing</p>
-                        <p className="text-[20px] m-0">7th of January 2026 - 14th of January 2026</p>
+                        <p className="text-[20px] m-0 font-bricolage-bold">7th of January 2026 - 14th of January 2026</p>
                     </div>
                 </div>
                 <hr className="text-gray-300" />
@@ -100,7 +100,7 @@ const MyScheduleDashboard = () => {
                                     <p>{tutorial.fee}</p>
                                 </div>
                             </div>
-                            <div>
+                            <div className="mt-8">
                                 <div className="bg-green text-white flex items-center gap-2 justify-center p-2.5 my-2 rounded-xl">
                                     <p className="text-[16px]">View Details</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5">

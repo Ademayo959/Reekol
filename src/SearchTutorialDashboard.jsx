@@ -43,6 +43,14 @@ const SearchTutorialDashboard = () => {
             fee: "Free",
             date: "Tomorrow"
         },
+        {
+            name: "CSC 203",
+            time: "3:00pm - 5:00pm",
+            location: "LT I",
+            tutor: "E-simple",
+            fee: "Free",
+            date: "Today"
+        },
     ]
 
     const results = tutorials.filter((tutorial) => 
@@ -125,7 +133,7 @@ const SearchTutorialDashboard = () => {
                                     <p>{tutorial.fee}</p>
                                 </div>
                             </div>
-                            <div>
+                            <div className="mt-8">
                                 <div className="bg-green text-white flex items-center gap-2 justify-center p-2.5 my-2 rounded-xl">
                                     <p className="text-[16px]">View Details</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5">
