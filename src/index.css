@@ -11,11 +11,22 @@
     font-family: "bricolage-bold";
     src: url("/src/assets/font/bricolage-bold.ttf") format(truetype);
     font-style: normal;
-    font-weight: 100;
+    font-weight: 0;
+}
+
+@font-face {
+    font-family: "bricolage-semibold";
+    src: url("/src/assets/font/bricolage-semibold.ttf") format(truetype);
+    font-style: normal;
+    font-weight: 0;
 }
 
 .font-bricolage{
     font-family: "bricolage", sans-serif;
+}
+
+.font-bricolage-semibold{
+    font-family: "bricolage-semibold", sans-serif;
 }
 
 .font-bricolage-bold{

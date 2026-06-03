@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import MainDashboardPage from './MainDashboardPage';
 import MyScheduleDashboard from './MyScheduleDashboard';
 import SearchTutorialDashboard from './SearchTutorialDashboard';
+import TutorDashboard from './TutorDashboard';
 import { useState } from 'react';
 
 
@@ -47,7 +48,7 @@ const dashboard = () => {
                             <div className='grid gap-y-2 my-2'>
                                 <p className='text-gray-600'>TUTORS</p>
                                 <div className='grid gap-y-2'>
-                                    <div className='flex gap-2 p-2 rounded-xl text-gray-600'>
+                                    <div onClick={() => setActiveTab("tutor-dashboard")} className={`flex gap-2 ${activeTab === "tutor-dashboard" ? `bg-green-50 text-green` : `bg-white`} p-2 rounded-xl text-gray-600`}>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                                         </svg>
@@ -79,6 +80,7 @@ const dashboard = () => {
                     {activeTab === "main-dashboard-page" && <MainDashboardPage />}
                     {activeTab === "my-schedule-dashboard" && <MyScheduleDashboard />}
                     {activeTab === "search-tutorial-dashboard" && <SearchTutorialDashboard />}
+                    {activeTab === "tutor-dashboard" && <TutorDashboard />}
                 </div>
             </div>
         </div>
