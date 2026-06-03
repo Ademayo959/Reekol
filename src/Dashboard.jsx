@@ -9,6 +9,7 @@ import { useState } from 'react';
 
 const dashboard = () => {
     const [activeTab, setActiveTab] = useState("main-dashboard-page")
+  
 
 
     return (
@@ -76,7 +77,7 @@ const dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className=''>
+                <div className='overflow-y-auto h-full'>
                     {activeTab === "main-dashboard-page" && <MainDashboardPage />}
                     {activeTab === "my-schedule-dashboard" && <MyScheduleDashboard />}
                     {activeTab === "search-tutorial-dashboard" && <SearchTutorialDashboard />}

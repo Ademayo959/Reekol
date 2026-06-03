@@ -167,3 +167,117 @@ Software Engineering Student @ FUTA
 
 
 
+<div className='grid grid-cols-2 w-full my-8 gap-8'>
+                                <div className='w-90 border border-gray-200 p-4'>
+                                    <div className='flex items-center justify-between'>
+                                        <p className='text-[20px]'>MTH 201: Advanced Calculus</p>
+                                        <div className='px-2 py-1 bg-green-50 w-fit'>
+                                            <p className='text-green'>TODAY</p>
+                                        </div>
+                                    </div>
+                                    <p className='text-gray-500 text-[14px]'>Taught by Adeyemi T.</p>
+                                    <hr className='text-gray-300 my-4' />
+                                    <div className='grid grid-cols-2'>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>TIME</p>
+                                            <p>4:00 PM - 6:00 PM</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>LOCATION</p>
+                                            <p>LT 2, Science Faculty</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>CAPACITY</p>
+                                            <p>4:00 PM - 6:00 PM</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>FEE</p>
+                                            <p>Free</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='w-90 border border-gray-200 p-4'>
+                                    <div className='flex items-center justify-between'>
+                                        <p className='text-[20px]'>MCS 201: Exam Prep</p>
+                                        <div className='px-2 py-1 bg-green-50 w-fit'>
+                                            <p className='text-green'>TODAY</p>
+                                        </div>
+                                    </div>
+                                    <p className='text-gray-500 text-[14px]'>Taught by Blessing</p>
+                                    <hr className='text-gray-300 my-4' />
+                                    <div className='grid grid-cols-2'>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>TIME</p>
+                                            <p>10:00 AM - 12:00 PM</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>LOCATION</p>
+                                            <p>SLS 3 in 1 A</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>CAPACITY</p>
+                                            <p>45/50</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>FEE</p>
+                                            <p>Free</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='w-90 border border-gray-200 p-4'>
+                                    <div className='flex items-center justify-between'>
+                                        <p className='text-[20px]'>MTH 112</p>
+                                        <div className='px-2 py-1 bg-green-50 w-fit'>
+                                            <p className='text-green'>TOMORROW</p>
+                                        </div>
+                                    </div>
+                                    <p className='text-gray-500 text-[14px]'>Taught by Adeyemi T.</p>
+                                    <hr className='text-gray-300 my-4' />
+                                    <div className='grid grid-cols-2'>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>TIME</p>
+                                            <p>4:00 PM - 6:00 PM</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>LOCATION</p>
+                                            <p>Great Hall</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>CAPACITY</p>
+                                            <p>12/30</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>FEE</p>
+                                            <p>Paid</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='w-90 border border-gray-200 p-4'>
+                                    <div className='flex items-center justify-between'>
+                                        <p className='text-[20px]'>MTH 301: Abstract Algebra</p>
+                                        <div className='px-2 py-1 bg-green-50 w-fit'>
+                                            <p className='text-green'>TODAY</p>
+                                        </div>
+                                    </div>
+                                    <p className='text-gray-500 text-[14px]'>Taught by Parker V.</p>
+                                    <hr className='text-gray-300 my-4' />
+                                    <div className='grid grid-cols-2'>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>TIME</p>
+                                            <p>6:00 PM - 8:00 PM</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>LOCATION</p>
+                                            <p>FOC 500 Cap</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>CAPACITY</p>
+                                            <p>40/100</p>
+                                        </div>
+                                        <div>
+                                            <p className='text-gray-500 text-[13px]'>FEE</p>
+                                            <p>Free</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
