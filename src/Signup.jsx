@@ -1,8 +1,11 @@
 import logo from './assets/reekol-logo-bg.png'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import Toast from './Toast';
 
 const Signup = () => {
+    const [IsVisible, setIsVisible] = useState(true)
+    const [ToastMessage, setToastMessage] = useState("")
     //info states
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -25,6 +28,8 @@ const Signup = () => {
 
         const data = response.json();
         console.log(data)
+        setIsVisible(true)
+        setToastMessage("Account Created")
     }
 
 
@@ -93,6 +98,7 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
+            <Toast IsVisible={IsVisible} message={ToastMessage} setIsVisible={setIsVisible} />
         </div>
     );
 }
