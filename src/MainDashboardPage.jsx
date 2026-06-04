@@ -235,7 +235,7 @@ const MainDashboardPage = () => {
             </div>
             {isModalActive && (
                 <div className='fixed w-screen h-screen bg-black/70 inset-0 z-99' onClick={() => { setIsModalActive(false) }}>
-                    <CreateTutorialModal />
+                    <CreateTutorialModal setIsModalActive={setIsModalActive} />
                 </div>
             )}
         </div>
