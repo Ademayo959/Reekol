@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Toast from './Toast';
 
 const Signup = () => {
-    const [IsVisible, setIsVisible] = useState(true)
+    const [IsVisible, setIsVisible] = useState(false)
     const [ToastMessage, setToastMessage] = useState("")
     //info states
     const [name, setName] = useState("")
