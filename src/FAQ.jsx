@@ -1,30 +1,11 @@
 import { useState } from "react";
 
-const FAQ = () => {
-    const faqs = [
-        {
-            question: "How much does it cost?",
-            answer: "The platform is completely free for students to use. You can discover tutorials, explore study sessions, connect with tutors, and access learning opportunities without paying any subscription fee or hidden charges."
-        },
-        {
-            question: "Can anyone post a tutorial?",
-            answer: "Yes, any registered student can post a tutorial. However, tutors are rated by attendees after sessions, allowing the community to identify the most helpful and reliable tutors while encouraging high-quality learning experiences."
-        },
-        {
-            question: "How do I verify a location?",
-            answer: "Tutorial locations include detailed venue information, maps, and directions whenever available. Students can also leave confirmations and feedback after attending sessions, helping others know whether a location is accurate and trustworthy."
-        },
-        {
-            question: "Can I join tutorials outside my department?",
-            answer: "Absolutely. The platform is designed to encourage collaborative learning across different departments and skill levels, allowing students to explore tutorials, workshops, and study sessions beyond their primary field of study."
-        }
-    ]
-
+const FAQ = ({faqs}) => {
+    
     const [openIndex, setOpenIndex] = useState(null)
     return (
-        <div className="font-bricolage my-18">
+        <div className="font-bricolage mb-18">
             <div>
-                <p className="text-5xl text-green text-center max-sm:leading-15 max-sm:text-[2.7rem] ">Frequently asked Questions</p>
                 <div className="justify-self-center mt-12 grid gap-y-4 max-sm:px-2">
                     {faqs.map((faq, index) => (
                         <div key={index} className="border border-gray-300 w-150 rounded-3xl p-2 max-sm:w-full max-sm:rounded-2xl max-sm:p-1">

@@ -5,13 +5,17 @@ const Navbar = () => {
     return (
         <div className='font-bricolage border-b border-gray-100 max-sm:px-4'>
             <div className='max-w-7xl m-auto py-4 flex items-center justify-between'>
-                <div className='cursor-pointer'>
-                    <img src={logo} alt="logo" className='w-35 max-sm:w-25' />
-                </div>
+                <Link to="/">
+                    <div className='cursor-pointer'>
+                        <img src={logo} alt="logo" className='w-35 max-sm:w-25' />
+                    </div>
+                </Link>
                 <div className='flex gap-6 text-gray-600 max-sm:hidden'>
                     <p className='cursor-pointer'>Products</p>
                     <p className='cursor-pointer'>Solutions</p>
-                    <p className='cursor-pointer'>Resources</p>
+                    <Link to="/resources">
+                        <p className='cursor-pointer'>Resources</p>
+                    </Link>
                 </div>
                 <div className='flex gap-4'>
                     <Link to="/login">
