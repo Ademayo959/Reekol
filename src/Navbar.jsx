@@ -11,7 +11,9 @@ const Navbar = () => {
                     </div>
                 </Link>
                 <div className='flex gap-6 text-gray-600 max-sm:hidden'>
-                    <p className='cursor-pointer'>Products</p>
+                    <Link to="/products">
+                        <p className='cursor-pointer'>Products</p>
+                    </Link>
                     <p className='cursor-pointer'>Solutions</p>
                     <Link to="/resources">
                         <p className='cursor-pointer'>Resources</p>
