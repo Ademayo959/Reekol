@@ -1,8 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const SearchTutorialDashboard = () => {
     const [searchQuery, setSearchQuery] = useState("")
-    const tutorials = [
+    const [tutorials, setTutorials] = useState([])
+
+    async function getTutorials(e) {
+
+        const token = localStorage.getItem("token")
+
+        const response = await fetch("https://reekol-backend.onrender.com/tutorials", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            }
+        })
+
+        if (!response.ok) {
+            console.log(data.message);
+            alert("failed")
+            return;
+        }
+
+        const data = await response.json();
+        setTutorials(data)
+    }
+
+    useEffect(()=> {
+        getTutorials();
+    }, [])
+
+    const tutorial = [
         {
             name: "MTS 202",
             time: "6:00pm - 8:00pm",
@@ -54,9 +82,9 @@ const SearchTutorialDashboard = () => {
     ]
 
     const results = tutorials.filter((tutorial) => 
-        tutorial.name.toLowerCase().includes(searchQuery.toLowerCase())
+        tutorial.title.toLowerCase().includes(searchQuery.toLowerCase())
     ) 
-
+    if (!tutorials) return <p>Loading...</p>
     return (
         <div className="w-full px-6 pt-6 bg-gray-100 h-full">
             <div>
@@ -98,10 +126,10 @@ const SearchTutorialDashboard = () => {
                     {results.map((tutorial, index) => (
                         <div key={index} className="w-88 bg-white px-5  py-2 rounded-2xl">
                             <div className="flex items-center justify-between">
-                                <p className="text-[35px] font-extrabold">{tutorial.name}</p>
+                                <p className="text-[35px] font-extrabold">{tutorial.course}</p>
                                 <div className="bg-green-100 flex w-fit rounded-2xl gap-2 items-center px-2 py-1">
                                     <div className="bg-green h-2 w-2 rounded-full"></div>
-                                    <p>{tutorial.date}</p>
+                                    <p>{tutorial.date.slice(5,10)}</p>
                                 </div>
                             </div>
                             <div className="flex gap-2 my-2">
