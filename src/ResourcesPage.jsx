@@ -30,13 +30,13 @@ const ResourcesPage = () => {
         <div className='font-bricolage'>
             <Navbar />
             <div>
-                <div className='justify-self-center my-12'>
+                <div className='justify-self-center my-12 px-2'>
                     <div className='border border-green-800 bg-green-100 px-2  w-fit rounded-2xl justify-self-center'>
                         <p className='text-green text-[12px] font-bricolage-semibold tracking-wider'>RESOURCES</p>
                     </div>
-                    <p className='text-[50px] text-green w-150 leading-12 text-center my-5'>Everything you need to survive on campus</p>
-                    <p className='text-gray-500 w-150  text-center'>Guides, tips, and articles to help Nigerian university students make the most of Reekol and ace their exams.</p>
-                    <div className='flex items-center gap-2 border border-gray-300 px-4 py-1 rounded-3xl my-6'>
+                    <p className='text-[50px] text-green w-150 leading-12 text-center my-5 max-sm:w-[98%] max-sm:justify-self-center max-sm:leading-13'>Everything you need to survive on campus</p>
+                    <p className='text-gray-500 w-150  text-center max-sm:w-90 max-sm:justify-self-center'>Guides, tips, and articles to help Nigerian university students make the most of Reekol and ace their exams.</p>
+                    <div className='flex items-center gap-2 border border-gray-300 px-4 py-1 rounded-3xl my-6 max-sm:pr-1'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="h-6 w-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
@@ -53,7 +53,7 @@ const ResourcesPage = () => {
                         <p className='text-[30px]'>Quick Start Guides</p>
                         <p className='text-gray-500'>Step-by-step walkthroughs for everything on Reekol</p>
                     </div>
-                    <div className='grid grid-cols-3 gap-6'>
+                    <div className='grid grid-cols-3 gap-6 max-sm:grid-cols-1 max-sm:justify-self-center'>
                         <div className='bg-white w-90 p-4 rounded-2xl'>
                             <div className='bg-green-100 h-8 w-8 flex items-center justify-center rounded-full mb-3'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="text-green h-5 w-5">
@@ -160,8 +160,8 @@ const ResourcesPage = () => {
                 </div>
             </div>
             <div className='m-auto'>
-                <div className='grid grid-cols-[40%_60%] items-start gap-12 justify-self-center'>
-                    <div className='my-18'>
+                <div className='grid grid-cols-[40%_60%] items-start gap-12 justify-self-center max-sm:grid-cols-1 max-sm:gap-0'>
+                    <div className='my-18 max-sm:px-4'>
                         <p className='text-green'>FAQ</p>
                         <p className='text-[35px]'>Frequently Asked Questions</p>
                         <p className='text-gray-500 text-[13px]'>Can't find what you're looking for? Reach out and we'll help</p>
@@ -177,24 +177,24 @@ const ResourcesPage = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-green py-8 '> 
+            <div className='bg-green py-8 '>
                 <div className=''>
-                    <div className='max-w-6xl flex justify-between items-center mx-auto'>
-                    <div>
-                        <p className='text-white text-[25px]'>Ready to never miss a tutorial again?</p>
-                        <p className='text-gray-300 text-[13px]'>Join thousands of Nigerian students who use Reekol to stay ahead.</p>
-                    </div>
-                    <div className='flex gap-4'>
-                        <Link to='/dashboard'>
-                            <div className='bg-white w-fit px-4 text-center h-9 flex items-center justify-center rounded-3xl shadow-md transition-all hover:-mt-1 cursor-pointer'>
-                                <p className='text-green'>Start For Free</p>
+                    <div className='max-w-6xl flex justify-between items-center mx-auto max-sm:grid max-sm:px-4'>
+                        <div className=''>
+                            <p className='text-white text-[25px]'>Ready to never miss a tutorial again?</p>
+                            <p className='text-gray-300 text-[13px] max-sm:w-[95%]'>Join thousands of Nigerian students who use Reekol to stay ahead.</p>
+                        </div>
+                        <div className='flex gap-4 max-sm:mt-3 max-sm:grid'>
+                            <Link to='/dashboard'>
+                                <div className='bg-white w-fit px-4 text-center h-9 flex items-center justify-center rounded-3xl shadow-md transition-all hover:-mt-1 cursor-pointer max-sm:w-full max-sm:rounded-sm'>
+                                    <p className='text-green'>Start For Free</p>
+                                </div>
+                            </Link>
+                            <div className='border border-gray-100 bg-green-50/10 w-fit px-4 text-center h-9 flex items-center justify-center rounded-3xl shadow-md transition-all hover:-mt-1 cursor-pointer max-sm:w-full max-sm:rounded-sm'>
+                                <p className='text-white'>Get a Demo</p>
                             </div>
-                        </Link>
-                        <div className='border border-gray-100 bg-green-50/10 w-fit px-4 text-center h-9 flex items-center justify-center rounded-3xl shadow-md transition-all hover:-mt-1 cursor-pointer'>
-                            <p className='text-white'>Get a Demo</p>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
             <Footer />
