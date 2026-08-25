@@ -1,1 +1,17 @@
 okay since the last README was obviously AI generated i'll just write it directly so reekol is a platform for students to find tutorials and tutors also can get the recognition they deserve so first of all i got this idea from another idea 😅 which was for a platform where people can rate PDFs (which i still plan to integrate somehow though 👀) it came at a point where i started wondering what problems i had around me that i could solve using the skills i had and tutorial discovery was one of them especially for 1st year uni students so the frontend was done with react and Tailwind while the backend which is in another repo btw was built with Express and Mongodb for the database working on reekol has taught me a lot about MERN stack cus this is like the first MERN project that i would take on so i've learned a lot about connecting the backend to the frontend currently i've been able to set up the login and signup functionality although i should add a loading animation to the buttons to give user feedback instead of the confusing silent delay btw clicking the button and you actually logging in you're able to post tutorials too now and see them on the dashboard too (although after a refresh 🥲) i'm done with all the pages and most of the frontend work  and the dashboard too i need to focus on tutors section now where they can create profiles and the whole rating algo behind their ratings
+## Getting Started
+
+Clone the repo:
+
+git clone <your-repo-url>
+cd reekol
+
+Install dependencies:
+
+npm install
+
+Run the app:
+
+npm run dev
+
+That's it. Open the local URL it gives you in the terminal and you're in.
